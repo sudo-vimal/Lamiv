@@ -12,7 +12,9 @@ namespace InvoiceApp.StartUpHelpers
         public static void AddFormFactory<TForm>(this IServiceCollection services)
             where TForm : class
         {
-
+            services.AddTransient<TForm>();
+            services.AddSingleton<Func<TForm>>(x => () => x.GetService<TForm>()!);
+            services.AddSingleton<IAbstractFactory<TForm>, AbstractFactory<TForm>>();
         }
         public static void AddAbstractFactory<TInterface, Timplementation>(this IServiceCollection services)
             where TInterface : class

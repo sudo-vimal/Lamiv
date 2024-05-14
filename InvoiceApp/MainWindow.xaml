@@ -5,14 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InvoiceApp"
         mc:Ignorable="d"
-        Title="Lamiv Invoice" Height="450" Width="800">
+        Title="Lamiv Invoice" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid >
-        <TextBox Name="usernameMain" HorizontalAlignment="Left" Margin="372,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FFE1EAEA" Height="24" FontFamily="Times New Roman" FontSize="13" FontWeight="Bold"/>
-        <PasswordBox x:Name="passwordMain" HorizontalAlignment="Left" Margin="372,195,0,0" VerticalAlignment="Top" Width="120" Background="#FFE7EDED" Height="24" FontSize="13"/>
-        <Label Content="Username" HorizontalAlignment="Left" Margin="276,144,0,0" VerticalAlignment="Top" Width="80" Height="24" FontFamily="Arial" FontSize="13"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="276,195,0,0" VerticalAlignment="Top" Width="80" Height="24" FontFamily="Arial" FontSize="13"/>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1, 0" EndPoint="0.9,1">
+                <GradientStop Color="#FF5B5959"/>
+                <GradientStop Color="#FFCAC7C7"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox Name="usernameMain" HorizontalAlignment="Left" Margin="372,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FFE1EAEA" Height="24" FontFamily="Times New Roman" FontSize="13" BorderBrush="#FF3E3E3E"/>
+        <PasswordBox x:Name="passwordMain" HorizontalAlignment="Left" Margin="372,195,0,0" VerticalAlignment="Top" Width="120" Background="#FFE7EDED" Height="24" FontSize="13" BorderBrush="#FF3E3E3E"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="276,144,0,0" VerticalAlignment="Top" Width="80" Height="24" FontFamily="Lucida Sans" FontSize="14"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="276,195,0,0" VerticalAlignment="Top" Width="80" Height="24" FontFamily="Lucida Sans" FontSize="14"/>
         <Button Content="Login" HorizontalAlignment="Left" Margin="402,255,0,0" VerticalAlignment="Top" Width="60" Height="22" Click="Login_Main"/>
-        <TextBlock Name="loginErrorMain" HorizontalAlignment="Left" Margin="372,292,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Foreground="#FFBD0F0F" Visibility="Hidden"/>
+        <TextBlock Name="loginErrorMain" HorizontalAlignment="Left" Margin="276,292,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="216" Foreground="#FFBD0F0F" Height="20" TextAlignment="Center" Visibility="Hidden"/>
 
     </Grid>
 </Window>

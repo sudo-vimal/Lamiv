@@ -51,7 +51,7 @@ namespace InvoiceApp.Service.Services
             }
             else
             {
-                response.Message = "Cannot Find User with given details";
+                response.Message = "Couldn't find user with given credentials";
             }
 
             return response;

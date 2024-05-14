@@ -13,6 +13,10 @@ namespace InvoiceApp.Domain
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UserEntity>()
+                .HasIndex(x => x.UserName)
+                .IsUnique();
+
+            modelBuilder.Entity<UserEntity>()
                  .Property(x => x.UserTypeFK)
                  .HasConversion<int>();
 

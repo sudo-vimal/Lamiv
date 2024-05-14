@@ -24,6 +24,7 @@ namespace InvoiceApp
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddSingleton<MainWindow>();
+                    services.AddSingleton<Dashboard>();
                     services.AddAbstractFactory<IAuthenticationService, AuthenticationService>();
                     services.AddAbstractFactory<IUserLayer, UserLayer>();
 
