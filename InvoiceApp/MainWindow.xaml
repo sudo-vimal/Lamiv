@@ -7,11 +7,12 @@
         mc:Ignorable="d"
         Title="Lamiv Invoice" Height="450" Width="800">
     <Grid >
-        <TextBox HorizontalAlignment="Left" Margin="372,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FFE1EAEA" Height="24" FontFamily="Times New Roman" FontSize="13" FontWeight="Bold"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="372,195,0,0" VerticalAlignment="Top" Width="120" Background="#FFE7EDED" Height="24" FontSize="13"/>
+        <TextBox Name="usernameMain" HorizontalAlignment="Left" Margin="372,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FFE1EAEA" Height="24" FontFamily="Times New Roman" FontSize="13" FontWeight="Bold"/>
+        <PasswordBox x:Name="passwordMain" HorizontalAlignment="Left" Margin="372,195,0,0" VerticalAlignment="Top" Width="120" Background="#FFE7EDED" Height="24" FontSize="13"/>
         <Label Content="Username" HorizontalAlignment="Left" Margin="276,144,0,0" VerticalAlignment="Top" Width="80" Height="24" FontFamily="Arial" FontSize="13"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="276,195,0,0" VerticalAlignment="Top" Width="80" Height="24" FontFamily="Arial" FontSize="13"/>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="402,255,0,0" VerticalAlignment="Top" Width="60" Height="22"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="402,255,0,0" VerticalAlignment="Top" Width="60" Height="22" Click="Button_Click"/>
+        <TextBlock Name="loginErrorMain" HorizontalAlignment="Left" Margin="372,292,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Foreground="#FFBD0F0F" Visibility="Hidden"/>
 
     </Grid>
 </Window>

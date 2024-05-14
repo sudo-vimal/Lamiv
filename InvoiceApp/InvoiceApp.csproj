@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\InvoiceApp.Domain\InvoiceApp.Domain.csproj" />
+    <ProjectReference Include="..\InvoiceApp.Service\InvoiceApp.Service.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,6 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Security.Cryptography;
 using System.Windows;
+using InvoiceApp.StartUpHelpers;
+using InvoiceApp.Service.Services.Interfaces;
+using InvoiceApp.Service.Services;
+using InvoiceApp.Domain.DataAccess.Interfaces;
+using InvoiceApp.Domain.DataAccess;
 
 namespace InvoiceApp
 {
@@ -19,6 +24,8 @@ namespace InvoiceApp
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddSingleton<MainWindow>();
+                    services.AddAbstractFactory<IAuthenticationService, AuthenticationService>();
+                    services.AddAbstractFactory<IUserLayer, UserLayer>();
 
                     services.AddDbContext<UserContext>(
                     options =>
