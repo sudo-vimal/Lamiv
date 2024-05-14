@@ -26,7 +26,7 @@ namespace InvoiceApp
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Login_Main(object sender, RoutedEventArgs e)
         {
             UserLoginCredentials credentials = new UserLoginCredentials()
             {
@@ -44,6 +44,7 @@ namespace InvoiceApp
             {
                 loginErrorMain.Visibility = Visibility.Visible;
                 loginErrorMain.Text = response.Message;
+
             }
         }
     }

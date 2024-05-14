@@ -11,7 +11,7 @@
         <PasswordBox x:Name="passwordMain" HorizontalAlignment="Left" Margin="372,195,0,0" VerticalAlignment="Top" Width="120" Background="#FFE7EDED" Height="24" FontSize="13"/>
         <Label Content="Username" HorizontalAlignment="Left" Margin="276,144,0,0" VerticalAlignment="Top" Width="80" Height="24" FontFamily="Arial" FontSize="13"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="276,195,0,0" VerticalAlignment="Top" Width="80" Height="24" FontFamily="Arial" FontSize="13"/>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="402,255,0,0" VerticalAlignment="Top" Width="60" Height="22" Click="Button_Click"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="402,255,0,0" VerticalAlignment="Top" Width="60" Height="22" Click="Login_Main"/>
         <TextBlock Name="loginErrorMain" HorizontalAlignment="Left" Margin="372,292,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Foreground="#FFBD0F0F" Visibility="Hidden"/>
 
     </Grid>

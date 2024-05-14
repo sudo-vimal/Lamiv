@@ -14,6 +14,14 @@ namespace InvoiceApp.StartUpHelpers
         {
 
         }
+        public static void AddAbstractFactory<TInterface, Timplementation>(this IServiceCollection services)
+            where TInterface : class
+                                where Timplementation : class, TInterface
+        {
+            services.AddTransient<TInterface, Timplementation>();
+            services.AddSingleton<Func<TInterface>>(x => () => x.GetService<TInterface>()!);
+            services.AddSingleton<IAbstractFactory<TInterface>, AbstractFactory<TInterface>>();
+        }
 
     }
 }
